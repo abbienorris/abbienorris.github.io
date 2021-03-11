@@ -1,0 +1,193 @@
+body {
+  height: 100vh;
+  font-family: 'Roboto', serif; 
+}
+
+.wrapper {
+  height: 100vh;
+  background-image: url(../img/vending-machine.svg);
+  background-repeat: no-repeat;
+  background-size: auto 400px;
+  background-position: top left;
+}
+
+.wrapper__icons {
+  display: flex;
+  padding: 30px 0 0 50px;
+  background-image: none;
+  height: auto;
+}
+  
+.btn {
+  background-image: url(../img/tea.svg);
+  background-repeat: no-repeat;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.btn--coffee {
+  background-image: url(../img/coffee.svg);
+}
+
+.btn--chocolate {
+  background-image: url(../img/chocolate.svg);
+}
+
+.refresh {
+  padding: 10px;
+  background-color: #d5d5d5;
+  border-radius: 5px;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.refresh span {
+  font-size: 16px;
+}
+
+.btn:focus {
+  outline-color: black; 
+}
+
+a span {
+  font-size: 0;
+}
+
+img {
+  width: 100%; 
+}
+
+.drink {
+  display: none;
+}
+
+.drink p:nth-child(1) {
+  margin-top: 5px;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.ordered {
+  background: white;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 13px;
+  margin-top: 20px;
+  margin-left: 57px;
+  max-width: 130px;
+}
+
+.drink p,
+.drink a {
+  opacity: 0;
+  font-size: 14px;
+}
+
+.drink p:nth-child(1) {
+  animation: change 2s ease-in-out forwards;
+}
+
+.drink p:nth-child(2) {
+  animation: change 2s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+
+.drink p:nth-child(3) {
+  animation: change 2s ease-in-out forwards;
+  animation-delay: 5s;
+}
+
+.drink p:nth-child(4) {
+  animation: change 2s ease-in-out forwards;
+  animation-delay: 7s;
+}
+
+.drink p:nth-child(5) {
+  animation: change 2s ease-in-out forwards;
+  animation-delay: 8s;
+}
+.drink a {
+  animation: change 2s ease-in-out forwards;
+  animation-delay: 9s;
+}
+
+@keyframes change {
+  to {
+    opacity: 1
+  }
+}
+
+@media (min-width: 576px) {
+  .wrapper {
+    background-size: auto 500px;
+  }
+
+  .wrapper__icons {
+    padding: 40px 0 0 70px;
+  }
+  
+  .btn {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .drink p {
+    font-size: 16px;
+  }
+
+  .ordered {
+    padding: 15px;
+    margin-top: 30px;
+    margin-left: 72px;
+    max-width: 155px;
+    width: 100%;
+  }
+ }
+
+@media (min-width: 768px) { 
+  .wrapper {
+    background-size: auto 600px;
+  }
+
+  .wrapper__icons {
+    padding: 48px 0 0 90px;
+  }
+
+  .btn {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .ordered {
+    margin-top: 40px;
+    margin-left: 90px;
+    max-width: 180px;
+  }
+}
+
+@media (min-width: 992px) { 
+  .wrapper {
+    background-size: auto 700px;
+  }
+
+  .wrapper__icons {
+    padding: 56px 0 0 95px;
+  }
+
+  .btn {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .ordered {
+    margin-left: 110px;
+    max-width: 210px;
+  }
+ }
